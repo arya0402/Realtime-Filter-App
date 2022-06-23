@@ -19,7 +19,6 @@ function draw() {
     image(video, 0, 0, 300, 300);
     fill(255, 0, 0);
     stroke(255, 0, 0);
-    circle(noseX, noseY, 20);
     image(img, noseX, noseY, 30, 30);
 }
 
@@ -34,8 +33,8 @@ function modelLoaded() {
 function gotPoses(results) {
     if(results.length > 0) {
         console.log(results);
-        noseX = results[0].pose.nose.x - 20;
-        noseY =  results[0].pose.nose.y - 20;
+        noseX = results[0].pose.nose.x - 15;
+        noseY =  results[0].pose.nose.y - 15;
         console.log("nose x = " + noseX);
         console.log("nose y = " + noseY);
     }
